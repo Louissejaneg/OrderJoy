@@ -1,8 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int year = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +31,11 @@ class Home extends StatelessWidget {
                     children: <Widget>[
                       Center(
                         child: CircleAvatar(
-                            child: Image.asset('assets/girl.png'),
+                            backgroundImage: AssetImage('assets/girl.png'),
                           radius: 70.0
                         ),
                       ),
-                      Divider(height: 55.0, color: Colors.blue[300], thickness: 10.0),
+                      Divider(height: 60.0, color: Colors.blue[300], thickness: 5.0),
                       Row(
                         children: [
                           Icon(
@@ -54,15 +61,23 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 30.0,),
-                      Text(
-                        'YEAR',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          letterSpacing: 2.0,
-                        ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.calendar_month_sharp,
+                            color: Colors.deepPurple[900],
+                          ),
+                          Text(
+                            'YEAR',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              letterSpacing: 2.0,
+                            ),
+                          ),
+                        ],
                       ),
                       Text(
-                        '3rd Year',
+                        '$year Year',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
@@ -70,12 +85,20 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 30.0,),
-                      Text(
-                        'EMAIL',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          letterSpacing: 2.0,
-                        ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.email,
+                            color: Colors.deepPurple[900],
+                          ),
+                          Text(
+                            'EMAIL',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              letterSpacing: 2.0,
+                            ),
+                          ),
+                        ],
                       ),
                       Text(
                         'Louissegarcia7@gmail.com',
@@ -91,8 +114,18 @@ class Home extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     ElevatedButton(
-                        onPressed: (){},
-                        child: Text('Add Year'),
+                        onPressed: (){
+                          setState(() {
+                            year += 1;
+                            });
+                        },
+                        child: Text('Add Year',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ),
                       style: const ButtonStyle(
                         backgroundColor: WidgetStatePropertyAll(Colors.blue),
                       )
