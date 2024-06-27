@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
                         ),
                       style: const ButtonStyle(
                         backgroundColor: WidgetStatePropertyAll(Colors.blue),
-                      )
+                      ),
                     ),
                   ],
                 ),

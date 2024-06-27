@@ -28,7 +28,7 @@ class _DashboardState extends State<Dashboard> {
               child: Text(
                   'Go to Menu',
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 18.0,
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
@@ -41,7 +41,7 @@ class _DashboardState extends State<Dashboard> {
               child: Text(
                 'Go to profile',
               style: TextStyle(
-              fontSize: 20.0,
+              fontSize: 18.0,
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
