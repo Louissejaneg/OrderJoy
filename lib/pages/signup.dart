@@ -16,7 +16,7 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan[200],
+      backgroundColor: Colors.cyan[100],
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 0),
@@ -92,7 +92,7 @@ class _SignupState extends State<Signup> {
                     ),
                       validator: (value){
                         if(value == null || value.isEmpty){
-                          return 'Please provide a name';
+                          return 'Please provide a password';
                         }
                         if(value.length < 8){
                           return 'Name should be atleast 8 characters long';
@@ -122,6 +122,29 @@ class _SignupState extends State<Signup> {
                   foregroundColor: Colors.black
                 ),
               ),
+                    SizedBox(height: 40.0,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'Already hava an account?',
+                          style: TextStyle(
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                        SizedBox(width: 5.0,),
+                        InkWell(
+                          child: Text(
+                            'Log In',
+                            style: TextStyle(
+                              color: Colors.blue[800],
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          onTap: ()=> Navigator.pushReplacementNamed(context,'/login'),
+                        ),
+                      ],
+                    ),
             ],
           ),
         ),
