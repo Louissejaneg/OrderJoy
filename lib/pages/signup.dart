@@ -21,10 +21,10 @@ class _SignupState extends State<Signup> {
         child: Padding(
           padding: EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
-                'Lets Get Started!',
+                'Signup',
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
                   letterSpacing: 2.0,
@@ -58,7 +58,7 @@ class _SignupState extends State<Signup> {
                         name = value!;
                       },
                     ),
-                    SizedBox(height: 30.0,),
+                    SizedBox(height: 20.0,),
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
                       maxLength: 40,
@@ -116,7 +116,7 @@ class _SignupState extends State<Signup> {
                         print(password);
                       }
                     },
-                    child: Text('Sign Up'),
+                    child: Text('Signup'),
                   style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.black

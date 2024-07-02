@@ -39,7 +39,7 @@ class _DashboardState extends State<Dashboard> {
               Navigator.pushNamed(context, '/profile');
             },
               child: Text(
-                'Go to profile',
+                'Go to Profile',
               style: TextStyle(
               fontSize: 18.0,
               color: Colors.black,
@@ -47,7 +47,7 @@ class _DashboardState extends State<Dashboard> {
             ),
             ),
             ),
-          ],
+              ],
         ),
       ),
     );

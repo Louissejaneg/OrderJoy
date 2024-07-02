@@ -38,14 +38,14 @@ class _LoginState extends State<Login> {
                 TextFormField(
                   maxLength: 40,
                   decoration: InputDecoration(
-                    label: Text('Username'),
+                    label: Text('Email'),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0)
                     ),
                   ),
                   validator: (value){
                     if(value == null || value.isEmpty){
-                      return 'Please provide a username';
+                      return 'Please provide a email';
                     }
                     if(value.length < 2){
                       return 'username should be atleast 3 letters long';
@@ -59,6 +59,7 @@ class _LoginState extends State<Login> {
 
                 SizedBox(height: 20.0,),
                 TextFormField(
+                  maxLength: 40,
                   obscureText: true,
                   decoration: InputDecoration(
                     label: Text('Password'),
@@ -102,7 +103,7 @@ class _LoginState extends State<Login> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'or Login with',
+                      'or',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -110,7 +111,7 @@ class _LoginState extends State<Login> {
                     ),
                   ],
                 ),
-                SizedBox(height: 50.0,),
+                SizedBox(height: 25.0,),
                 ElevatedButton(
                     onPressed: (){},
                     child: Row(
@@ -136,7 +137,7 @@ class _LoginState extends State<Login> {
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue[900],
+                      backgroundColor: Colors.blue[800],
                       foregroundColor: Colors.black
                     ),
                 ),
