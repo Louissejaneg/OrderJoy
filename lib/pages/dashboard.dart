@@ -26,12 +26,15 @@ class _DashboardState extends State<Dashboard> {
                 Navigator.pushNamed(context, '/menu');
               },
               child: Text(
-                  'Go to Menu',
+                  'Menu',
                 style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.black,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
+              ),
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.brown,
               ),
             ),
             ElevatedButton(
@@ -39,13 +42,54 @@ class _DashboardState extends State<Dashboard> {
               Navigator.pushNamed(context, '/profile');
             },
               child: Text(
-                'Go to Profile',
+                'Profile',
               style: TextStyle(
-              fontSize: 18.0,
-              color: Colors.black,
+              color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
             ),
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.brown,
+              ),
+            ),
+            SizedBox(height: 20.0,),
+            Center(
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.brown,
+                ),
+              ),
+            ),
+            SizedBox(height: 20.0,),
+            Center(
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/signup');
+                  },
+                  child: Text(
+                    'Sign up',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight : FontWeight.bold,
+                    ),
+                  ),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.brown,
+                ),
+              ),
             ),
               ],
         ),

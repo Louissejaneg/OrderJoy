@@ -73,7 +73,7 @@ class _SignupState extends State<Signup> {
                           return 'Please provide a email';
                         }
                         if(value.length < 2){
-                          return 'Name should be atleast 60 letters long';
+                          return 'Email should be atleast 10 letters long';
                         }
                         return null;
                       },
@@ -95,7 +95,7 @@ class _SignupState extends State<Signup> {
                           return 'Please provide a password';
                         }
                         if(value.length < 8){
-                          return 'Name should be atleast 8 characters long';
+                          return 'Password should be atleast 8 characters long';
                         }
                         if(value.length >20){
                           return 'Please must be 20 characters long only';
@@ -127,7 +127,7 @@ class _SignupState extends State<Signup> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'Already hava an account?',
+                          'Already have an account?',
                           style: TextStyle(
                             color: Colors.grey[600],
                           ),

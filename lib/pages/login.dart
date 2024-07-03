@@ -48,7 +48,7 @@ class _LoginState extends State<Login> {
                       return 'Please provide a email';
                     }
                     if(value.length < 2){
-                      return 'username should be atleast 3 letters long';
+                      return 'Email should be atleast 10 letters long';
                     }
                     return null;
                   },
@@ -72,10 +72,10 @@ class _LoginState extends State<Login> {
                       return 'Please provide a password';
                     }
                     if(value.length < 8){
-                      return 'Name should be atleast 8 characters long';
+                      return 'Password should be atleast 8 characters long';
                     }
                     if(value.length >20){
-                      return 'Please must be 20 characters long only';
+                      return 'Please must be 10 characters long only';
                     }
                     return null;
                   },
@@ -122,8 +122,8 @@ class _LoginState extends State<Login> {
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red[900],
-                      foregroundColor: Colors.black
+                      backgroundColor: Colors.white70,
+                      foregroundColor: Colors.red
                     ),
                 ),
                 SizedBox(height: 5.0,),
@@ -137,7 +137,7 @@ class _LoginState extends State<Login> {
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue[800],
+                      backgroundColor: Colors.blue[700],
                       foregroundColor: Colors.black
                     ),
                 ),
@@ -146,7 +146,7 @@ class _LoginState extends State<Login> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Dont hava an account?',
+                      'Dont have an account?',
                       style: TextStyle(
                         color: Colors.grey[600],
                       ),
