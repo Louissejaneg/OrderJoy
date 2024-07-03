@@ -22,6 +22,10 @@ class _MenuState extends State<Menu> {
     for(var product in data){
       products.add(Product.fromJson(product));
     }
+
+    for(var product in products){
+      print(product.productName);
+    }
     return products;
 
   }

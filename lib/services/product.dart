@@ -13,8 +13,8 @@ class Product {
   factory Product.fromJson(Map<String, dynamic> json){
     return switch(json){
       {
-      'Id' : int id,
-      'productName' : String productName,
+      'id' : int id,
+      'productname' : String productName,
       'description' : String description,
       'price' : double price
       } =>
