@@ -116,7 +116,7 @@ class _SignupState extends State<Signup> {
                         print(password);
                       }
                     },
-                    child: Text('Signup'),
+                    child: Text('Create Account'),
                   style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.black

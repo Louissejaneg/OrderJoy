@@ -28,15 +28,16 @@ class _DashboardState extends State<Dashboard> {
               child: Text(
                   'Menu',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Colors.brown,
+                backgroundColor: Colors.white
               ),
             ),
+            SizedBox(height:  20.0,),
             ElevatedButton(
               onPressed: (){
               Navigator.pushNamed(context, '/profile');
@@ -44,13 +45,13 @@ class _DashboardState extends State<Dashboard> {
               child: Text(
                 'Profile',
               style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
             ),
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Colors.brown,
+                backgroundColor: Colors.white,
               ),
             ),
             SizedBox(height: 20.0,),
@@ -62,13 +63,13 @@ class _DashboardState extends State<Dashboard> {
                     child: Text(
                       'Login',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
-                  backgroundColor: Colors.brown,
+                  backgroundColor: Colors.white,
                 ),
               ),
             ),
@@ -81,13 +82,13 @@ class _DashboardState extends State<Dashboard> {
                   child: Text(
                     'Sign up',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontWeight : FontWeight.bold,
                     ),
                   ),
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
-                  backgroundColor: Colors.brown,
+                  backgroundColor: Colors.white,
                 ),
               ),
             ),
