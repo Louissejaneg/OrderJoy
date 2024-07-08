@@ -29,7 +29,7 @@ class _SelectedProductState extends State<SelectedProduct> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Order'),
-        backgroundColor: Colors.blue[400],
+        backgroundColor: Colors.blue[300],
         centerTitle: true,
       ),
       body: Column(
