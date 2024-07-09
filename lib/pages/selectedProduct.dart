@@ -27,9 +27,10 @@ class _SelectedProductState extends State<SelectedProduct> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.cyan[100],
       appBar: AppBar(
         title: Text('Order'),
-        backgroundColor: Colors.blue[300],
+        backgroundColor: Colors.blue[400],
         centerTitle: true,
       ),
       body: Column(
