@@ -33,58 +33,91 @@ class _SelectedProductState extends State<SelectedProduct> {
         backgroundColor: Colors.blue[400],
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(
-            children: [
-              Text(widget.product.productName),
-              Text(widget.product.description),
-            ],
-          ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            '₱${totalAmount.toStringAsFixed(2)}',
-            style: TextStyle(
-            fontSize: 20.0
-    ),
-          ),
-      Row(
-        children: [
-          Text(widget.product.price.toString()),
-          IconButton(onPressed: () {
-            setState(() {
-              if(numberOfOrders >=1){
-                numberOfOrders-=1;
-                totalAmount = product.price * numberOfOrders;
-              }
-            });
-           },
-    icon: Icon(Icons.remove)
-          ),
-          Text(
-            numberOfOrders.toString(),
-            style: TextStyle(
-              fontSize: 20.0,
+
+      body: Center(
+        child: SizedBox(
+          width: 400,
+          height: 700,
+          child: Card(
+            color: Colors.blue[400],
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        product.productName,
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Text(
+                        product.description,
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '₱ ${totalAmount.toStringAsFixed(2)}',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              numberOfOrders -= 1;
+                              totalAmount = product.price * numberOfOrders;
+                            },
+                            icon: Icon(Icons.remove),
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.white,
+                                foregroundColor: Colors.black),
+                          ),
+                          Text(
+                            '1',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.white, // Text color
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {
+                              setState(() {
+                                numberOfOrders += 1;
+                                totalAmount = product.price * numberOfOrders;
+                              });
+                            },
+                            icon: Icon(Icons.add),
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.white,
+                                foregroundColor: Colors.black),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
-          IconButton(
-              onPressed: () {
-                setState(() {
-                  numberOfOrders += 1;
-                  totalAmount = product.price * numberOfOrders;
-                });
-              },
-          icon: Icon(Icons.add)
-          ),
-        ],
-          ),
-        ],
-      )
-    ],
-    ),
+        ),
+      ),
     );
   }
 }

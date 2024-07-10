@@ -13,6 +13,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.blue[400],
           elevation: 3.0,
           onTap: (int val){
             switch(val){
@@ -27,11 +28,11 @@ class _DashboardState extends State<Dashboard> {
           currentIndex: 0,
           items: const[
             BottomNavigationBarItem(
-                icon: Icon(Icons.fastfood),
+                icon: Icon(Icons.fastfood, color: Colors.black),
                 label: 'Menu'
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: Icon(Icons.person, color: Colors.black),
                 label: 'Profile'
             ),
           ],
