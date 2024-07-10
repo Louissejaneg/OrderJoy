@@ -11,6 +11,8 @@ class _LoginState extends State<Login> {
   final formKey = GlobalKey<FormState>();
   String username = '';
   String password = '';
+  bool _obscure = true;
+  IconData _obscureIcon = Icons.visibility_off;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +41,7 @@ class _LoginState extends State<Login> {
                 TextFormField(
                   maxLength: 40,
                   decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.mail),
                     label: Text('Email'),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0)
@@ -61,8 +64,22 @@ class _LoginState extends State<Login> {
                 SizedBox(height: 20.0,),
                 TextFormField(
                   maxLength: 40,
-                  obscureText: true,
+                  obscureText: _obscure,
                   decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.lock_rounded),
+                    suffixIcon: IconButton(
+                      icon:  Icon(_obscureIcon),
+                      onPressed: (){
+                        setState(() {
+                          _obscure = !_obscure;
+                          if(_obscure){
+                            _obscureIcon = Icons.visibility_off;
+                          }else{
+                            _obscureIcon = Icons.visibility;
+                          }
+                        });
+                      }
+                    ),
                     label: Text('Password'),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0)
@@ -76,7 +93,7 @@ class _LoginState extends State<Login> {
                       return 'Password should be atleast 8 characters long';
                     }
                     if(value.length >20){
-                      return 'Please must be 10 characters long only';
+                      return 'Please must be 20 characters long only';
                     }
                     return null;
                   },

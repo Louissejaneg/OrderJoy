@@ -61,6 +61,7 @@ createAccount(User user) async{
                     TextFormField(
                       maxLength: 40,
                       decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.person),
                         label: Text('Name'),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0)
@@ -84,6 +85,7 @@ createAccount(User user) async{
                       keyboardType: TextInputType.emailAddress,
                       maxLength: 40,
                       decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.mail),
                         label: Text('Email'),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0)
