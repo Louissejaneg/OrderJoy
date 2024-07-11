@@ -19,7 +19,7 @@ class _MenuState extends State<Menu> {
     final response = await http.get(Uri.parse('http://10.0.2.2:8080/api/v1/product/all')
     );
     final data = jsonDecode(response.body);
-    print (data);
+    // print (data);
     List products = <Product>[];
     for(var product in data){
       products.add(Product.fromJson(product));
@@ -69,7 +69,7 @@ class _MenuState extends State<Menu> {
                   itemCount: products.length,
                   itemBuilder: (context, index){
                     return Card(
-                      color: Colors.grey[300],
+                      color: Colors.blue[300],
                       child: ListTile(
                         title: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

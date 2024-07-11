@@ -93,7 +93,7 @@ class _SelectedProductState extends State<SelectedProduct> {
                             '1',
                             style: TextStyle(
                               fontSize: 20.0,
-                              color: Colors.white, // Text color
+                              color: Colors.black, // Text color
                             ),
                           ),
                           IconButton(
@@ -111,6 +111,20 @@ class _SelectedProductState extends State<SelectedProduct> {
                         ],
                       ),
                     ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: ElevatedButton.icon(
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/checkout');
+                    },
+                    icon: Icon(Icons.shopping_cart),
+                    label: Text('Check Out'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.cyan[100],
+                      foregroundColor: Colors.black,
+                    ),
                   ),
                 ),
               ],

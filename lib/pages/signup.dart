@@ -39,7 +39,14 @@ createAccount(User user) async{
     return Scaffold(
       backgroundColor: Colors.cyan[100],
       body: SafeArea(
-        child: Padding(
+        child: Container(
+         decoration: BoxDecoration(
+           image: DecorationImage(
+           image: AssetImage('assets/Cone.jpg'),
+           fit: BoxFit.cover
+         ),
+        ),
+           child: Padding(
           padding: EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -162,6 +169,51 @@ createAccount(User user) async{
                   foregroundColor: Colors.black
                 ),
               ),
+
+                    SizedBox(height: 25.0,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'or',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 25.0,),
+                    ElevatedButton(
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.g_mobiledata),
+                          Text('Continue with Google'),
+                        ],
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white70,
+                          foregroundColor: Colors.red
+                      ),
+                    ),
+                    SizedBox(height: 5.0,),
+                    ElevatedButton(
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.facebook),
+                          Text('Continue with Facebook'),
+                        ],
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue[700],
+                          foregroundColor: Colors.black
+                      ),
+                    ),
+
                     SizedBox(height: 40.0,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -169,7 +221,7 @@ createAccount(User user) async{
                         Text(
                           'Already have an account?',
                           style: TextStyle(
-                            color: Colors.grey[600],
+                            color: Colors.black,
                           ),
                         ),
                         SizedBox(width: 5.0,),
@@ -192,6 +244,7 @@ createAccount(User user) async{
       ),
     ),
       ),
+    ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -54,17 +55,46 @@ class _DashboardState extends State<Dashboard> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Center(
-                  child: Image.asset(
-                    'assets/nobg.jpg',
-                    height: 700,
-                    width: 360,
+                FlutterCarousel(
+                  options: CarouselOptions(
+                    height: 500.0,
+                    autoPlay: true,
+                    autoPlayAnimationDuration: Duration(seconds: 5),
+                    showIndicator: true,
+                    slideIndicator: CircularSlideIndicator(),
                   ),
+                  items: [
+                    'assets/Graham.jpg',
+                    'assets/Halohalo.webp',
+                    'assets/Icecream.jpg',
+                    'assets/MaisConYelo.webp',
+                  ].map((String imagePath) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: EdgeInsets.symmetric(horizontal: 10.0),
+                          decoration: BoxDecoration(
+                            color: Colors.blue[400],
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10.0),
+                            child: Image.asset(
+                              imagePath,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  }).toList(),
                 ),
-              ],
+                  ]
+                ),
             ),
           ),
-        )
+
     );
   }
 }

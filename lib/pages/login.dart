@@ -46,7 +46,15 @@ class _LoginState extends State<Login> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.cyan[100],
-      body: SafeArea(
+        body: SafeArea(
+        child: Container(
+        decoration: BoxDecoration(
+        image: DecorationImage(
+        image: AssetImage('assets/Cone.jpg'),
+    fit: BoxFit.cover
+    ),
+    ),
+
         child: Padding(
           padding: EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 0),
           child: Column(
@@ -217,7 +225,7 @@ class _LoginState extends State<Login> {
                     Text(
                       'Dont have an account?',
                       style: TextStyle(
-                        color: Colors.grey[600],
+                        color: Colors.black,
                       ),
                     ),
                     SizedBox(width: 5.0,),
@@ -239,6 +247,7 @@ class _LoginState extends State<Login> {
           ],
         ),
       ),
+    ),
     ),
     );
   }
